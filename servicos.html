@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>Serviços</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding-top: 56px;
+      height: 100%;
+      background-color: #01688F;
+
+    }
+
+    .navbar {
+      background-color: #FFFFFF;
+      position: fixed;
+      width: 100%;
+      z-index: 1000
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .signup-container {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .texto {
+      text-align: center;
+      margin: 120px 50px;
+      color: white;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-center {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .nav-toggle {
+      color: #01688F;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+    }
+
+    button {
+      font-size: 1.5rem;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    button:hover {
+      transform: rotate(90deg);
+    }
+
+    .links a {
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s linear;
+    }
+
+    .links a:hover {
+      background: #01688F;
+      padding-left: 1.5rem;
+    }
+
+    .links {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+
+    .show-links {
+      height: 10rem;
+    }
+
+
+    .banheira,
+    .tele.busca,
+    .vet {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 150px;
+
+    }
+
+    .icon {
+      width: 150px;
+      height: 150px;
+    }
+
+    .icon-container p {
+      max-width: 200px;
+    }
+
+    .agendar {
+      background-color: white;
+      border-radius: 20px;
+      color: #01688F;
+    }
+
+    .agendar:hover {
+      transform: none;
+    }
+
+    .footer {
+      margin-top: 700px;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+
+    .mapa,
+    .numero,
+    .email {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-container {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+
+    }
+
+    .icon-footer {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-info {
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class='nav-center'>
+      <div class='nav-header'>
+        <button class='nav-toggle'>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class='links'>
+        <li>
+          <a href='index.html'>home</a>
+        </li>
+        <li>
+          <a href='sobrenos.html'>sobre nós</a>
+        </li>
+        <li>
+          <a href='servicos.html'>serviços</a>
+        </li>
+        <li>
+          <a href='produtos.html'>produtos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="icon-container">
+    <div class="banheira">
+      <img src="assets/icone1.png" alt="Banheira Icon" class="icon">
+      <h2>Banho e Tosa</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+    </div>
+    <div class="tele busca">
+      <img src="assets/icone2.png" alt="Tele Busca Icon" class="icon">
+      <h2>Tele Busca</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <button class="agendar" id="agendarButton">Agende já!</button>
+
+    </div>
+
+    <div class="vet">
+      <img src="assets/icone3.png" alt="Vet Icon" class="icon">
+      <h2>Veterinário</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+
+    </div>
+
+  </div>
+
+  <footer class="footer fixed-bottom ">
+    <p>Desenvolvido por Gabriela</p>
+    <div class="footer-container">
+      <div class="mapa">
+        <img src="assets/mapa.png" alt="Mapa Icon" class="icon-footer">
+        <h2 class="footer-info">Endereço</h2>
+        <p class="footer-info">Rua Tal, 200</p>
+
+      </div>
+      <div class="numero">
+        <img src="assets/numero.png" alt="Telefone Icon" class="icon-footer">
+        <h2 class="footer-info">Telefone</h2>
+        <p class="footer-info">(51) 9999-00000</p>
+      </div>
+
+      <div class="email">
+        <img src="assets/email.png" alt="Email Icon" class="icon-footer">
+        <h2 class="footer-info">Email</h2>
+        <p class="footer-info">petshop@email.com</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="js/cad.js"></script>
+  <script src="js/button.js"></script>
+
+</body>
+
+</html>

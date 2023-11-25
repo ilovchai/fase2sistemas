@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>Cadastre-se</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #01688F;
+      display: flex;
+      flex-direction: column
+    }
+
+    .navbar {
+      background-color: #FFFFFF;
+    }
+
+
+    .navbar-light .navbar-nav .nav-link {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .cadastro {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .texto {
+      text-align: center;
+      margin: 120px 50px;
+      color: white;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-center {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .nav-toggle {
+      color: #01688F;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+    }
+
+    button {
+      font-size: 1.5rem;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    button:hover {
+      transform: rotate(90deg);
+    }
+
+    .links a {
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s linear;
+    }
+
+    .links a:hover {
+      background: #01688F;
+      padding-left: 1.5rem;
+
+    }
+
+    .links {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+
+    .show-links {
+      height: 10rem;
+    }
+
+    .footer {
+      margin-top: auto;
+      background-color: white;
+      color: black;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+
+
+    .footer {
+      margin-top: auto;
+      background-color: white;
+      color: black;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .mapa,
+    .numero,
+    .email {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+
+    }
+
+    .icon-footer {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-info {
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  < !-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+
+      <div class='nav-center'>
+        <div class='nav-header'>
+          <button class='nav-toggle'>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <ul class='links'>
+          <li>
+            <a href='index.html'>home</a>
+          </li>
+          <li>
+            <a href='sobrenos.html'>sobre nós</a>
+          </li>
+          <li>
+            <a href='servicos.html'>serviços</a>
+          </li>
+          <li>
+            <a href='produtos.html'>produtos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="texto">
+      <h2>Crie sua conta</h2>
+      <h3>e aproveite os benefícios de ser nosso cliente!</h3>
+    </div>
+    <div class="container cadastro">
+
+      <!-- User -->
+      <form>
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="firstName">Nome:</label>
+              <input type="text" class="form-control" id="primeiroNome" name="primeiroNome" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="sobrenome">Sobrenome:</label>
+              <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input type="text" class="form-control" id="cpf" name="cpf" required>
+        </div>
+        <div class="form-group">
+          <label for="fone">Telefone:</label>
+          <input type="tel" class="form-control" id="fone" name="fone" required>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha:</label>
+          <input type="senha" class="form-control" id="senha" name="senha" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmeSenha">Confirme sua Senha:</label>
+          <input type="senha" class="form-control" id="confirmeSenha" name="confirmeSenha" required>
+        </div>
+
+        <!-- Pet  -->
+        <h3>Informações do Pet</h3>
+        <div class="form-row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="nomePet">Nome do Pet:</label>
+              <input type="text" class="form-control" id="nomePet" name="nomePet">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="tipoPet">Tipo de Pet:</label>
+              <select class="form-control" id="tipoPet" name="tipoPet">
+                <option value="cachoro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="passaro">Pássaro</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="raça">Raça:</label>
+          <input type="text" class="form-control" id="raça" name="raça">
+        </div>
+        <div class="form-group">
+          <label for="petTemp">Temperamento:</label>
+          <textarea class="form-control" id="petTemp" name="petTemp" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Criar Conta</button>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <p>Desenvolvido por Gabriela</p>
+      <div class="footer-container">
+        <div class="mapa">
+          <img src="assets/mapa.png" alt="Mapa Icon" class="icon-footer">
+          <h2 class="footer-info">Endereço</h2>
+          <p class="footer-info">Rua Tal, 200</p>
+
+        </div>
+        <div class="numero">
+          <img src="assets/numero.png" alt="Telefone Icon" class="icon-footer">
+          <h2 class="footer-info">Telefone</h2>
+          <p class="footer-info">(51) 9999-00000</p>
+        </div>
+
+        <div class="email">
+          <img src="assets/email.png" alt="Email Icon" class="icon-footer">
+          <h2 class="footer-info">Email</h2>
+          <p class="footer-info">petshop@email.com</p>
+
+        </div>
+
+      </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS etc -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/cad.js"></script>
+</body>
+
+</html>

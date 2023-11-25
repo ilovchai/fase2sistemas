@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <title>Sobre Nós</title>
+  <style>
+    body,
+    html {
+
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #01688F;
+      overflow: hidden;
+    }
+
+    .navbar {
+      background-color: #FFFFFF;
+    }
+
+
+    .navbar-light .navbar-nav .nav-link {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .signup-container {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .texto,
+    {
+    text-align: center;
+    margin: 120px 50px;
+    color: white;
+    }
+
+    .sobre {
+      text-align: center;
+      margin: 120px 150px;
+      color: white;
+      padding-top: 70px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-center {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .nav-toggle {
+      color: #01688F;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+    }
+
+    button {
+      font-size: 1.5rem;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    button:hover {
+      transform: rotate(90deg);
+    }
+
+    .links a {
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s linear;
+    }
+
+    .links a:hover {
+      background: #01688F;
+      padding-left: 1.5rem;
+
+    }
+
+    .links {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+
+    .show-links {
+      height: 10rem;
+    }
+
+
+    .footer {
+      margin-top: auto;
+      background-color: white;
+      color: black;
+      margin: 270px 0;
+      text-align: center;
+    }
+
+    .mapa,
+    .numero,
+    .email {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+
+    }
+
+    .icon-footer {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-info {
+      font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  < !-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+
+
+      <div class='nav-center'>
+        <div class='nav-header'>
+          <button class='nav-toggle'>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <ul class='links'>
+          <li>
+            <a href='index.html'>home</a>
+          </li>
+          <li>
+            <a href='sobrenos.html'>sobre nós</a>
+          </li>
+          <li>
+            <a href='servicos.html'>serviços</a>
+          </li>
+          <li>
+            <a href='produtos.html'>produtos</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </nav>
+
+    <div class="sobre">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.</p>
+    </div>
+
+
+    <footer class="footer">
+      <p>Desenvolvido por Gabriela</p>
+      <div class="footer-container">
+        <div class="mapa">
+          <img src="assets/mapa.png" alt="Mapa Icon" class="icon-footer">
+          <h2 class="footer-info">Endereço</h2>
+          <p class="footer-info">Rua Tal, 200</p>
+
+        </div>
+        <div class="numero">
+          <img src="assets/numero.png" alt="Telefone Icon" class="icon-footer">
+          <h2 class="footer-info">Telefone</h2>
+          <p class="footer-info">(51) 9999-00000</p>
+        </div>
+
+        <div class="email">
+          <img src="assets/email.png" alt="Email Icon" class="icon-footer">
+          <h2 class="footer-info">Email</h2>
+          <p class="footer-info">petshop@email.com</p>
+
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="js/cad.js"></script>
+</body>
+
+</html>

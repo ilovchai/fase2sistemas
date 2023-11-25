@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #01688F;
+    }
+
+    .container h2 {
+      color: #000;
+      font-size: 26px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      margin: 30px 0 60px;
+    }
+
+    .container h2::after {
+      content: "";
+      width: 100px;
+      position: absolute;
+      margin: 0 auto;
+      height: 4px;
+      border-radius: 1px;
+      background: #01688F;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+    }
+
+    .carousel {
+      margin: 50px auto;
+      padding: 0 70px;
+    }
+
+    .carousel .item {
+      color: #01688F;
+      min-height: 325px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .carousel .thumb-wrapper {
+      padding: 25px 15px;
+      background: #fff;
+      border-radius: 6px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel .item .img-box {
+      height: 120px;
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+    }
+
+    .carousel .item img {
+      max-width: 100%;
+      max-height: 100%;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+
+    .carousel .item h4 {
+      font-size: 18px;
+    }
+
+    .carousel .item h4,
+    .carousel .item p,
+    .carousel .item ul {
+      margin-bottom: 5px;
+    }
+
+    .carousel .thumb-content .btn {
+      color: #01688F;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: bold;
+      background: none;
+      border: 1px solid #01688F;
+      padding: 6px 14px;
+      margin-top: 5px;
+      line-height: 16px;
+      border-radius: 20px;
+    }
+
+    .carousel .thumb-content .btn:hover,
+    .carousel .thumb-content .btn:focus {
+      color: #fff;
+      background: #01688F;
+      box-shadow: none;
+    }
+
+    .carousel .thumb-content .btn i {
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    .carousel .carousel-control {
+      height: 44px;
+      width: 40px;
+      background: #01688F;
+      margin: auto 0;
+      border-radius: 4px;
+      opacity: 0.8;
+    }
+
+    .carousel .carousel-control:hover {
+      background: #01689F;
+      opacity: 1;
+    }
+
+    .carousel .carousel-control i {
+      font-size: 36px;
+      position: absolute;
+      top: 50%;
+      display: inline-block;
+      margin: -19px 0 0 0;
+      z-index: 5;
+      left: 0;
+      right: 0;
+      color: #fff;
+      text-shadow: none;
+      font-weight: bold;
+    }
+
+    .carousel .preco {
+      font-size: 13px;
+      padding: 2px 0;
+    }
+
+    .carousel .preco strike {
+      opacity: 0.7;
+      margin-right: 5px;
+    }
+
+    .carousel .carousel-control.left i {
+      margin-left: -2px;
+    }
+
+    .carousel .carousel-control.right i {
+      margin-right: -4px;
+    }
+
+    .carousel .carousel-indicators {
+      bottom: -50px;
+    }
+
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      border-radius: 50%;
+      border: none;
+    }
+
+    .carousel-indicators li {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-indicators li.active {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel .wish-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 99;
+      cursor: pointer;
+      font-size: 16px;
+      color: #abb0b8;
+    }
+
+    .carousel .wish-icon .fa-heart {
+      color: #01688F;
+    }
+
+    .estrela li {
+      padding: 0;
+    }
+
+    .estrela i {
+      font-size: 14px;
+      color: #ffc000;
+    }
+
+
+
+    .navbar {
+      background-color: #FFFFFF;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+      color: black;
+      text-decoration: underline;
+    }
+
+    .signup-container {
+      max-width: 600px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .texto {
+      text-align: center;
+      margin: 120px 50px;
+      color: white;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-center {
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .nav-toggle {
+      color: #01688F;
+      background: transparent;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+    }
+
+    .nav-toggle {
+      font-size: 1.5rem;
+      border-color: transparent;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      background: transparent;
+    }
+
+    .nav-toggle:hover {
+      transform: rotate(90deg);
+    }
+
+    .links a {
+      color: black;
+      text-transform: capitalize;
+      letter-spacing: 0.1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s linear;
+    }
+
+    .links a:hover {
+      background: #01688F;
+      padding-left: 1.5rem;
+    }
+
+    .links {
+      height: 0;
+      overflow: hidden;
+      transition: all 0.3s linear;
+    }
+
+    .show-links {
+      height: 10rem;
+    }
+
+    .footer {
+      margin-top: auto;
+      background-color: white;
+      color: black;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .mapa,
+    .numero,
+    .email {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-container {
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+
+    }
+
+    .icon-footer {
+      width: 20px;
+      height: 20px;
+    }
+
+    .footer-info {
+      font-size: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class='nav-center'>
+      <div class='nav-header'>
+        <button class='nav-toggle'>
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <ul class='links'>
+        <li>
+          <a href='index.html'>home</a>
+        </li>
+        <li>
+          <a href='sobrenos.html'>sobre nós</a>
+        </li>
+        <li>
+          <a href='servicos.html'>serviços</a>
+        </li>
+        <li>
+          <a href='produtos.html'>produtos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Nossos <b>Produtos</b></h2>
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="0">
+
+          <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+          </ol>
+
+          <!-- Wrapper para itens do carousel -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao1.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Adultos</h4>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <p class="preco"><strike>R$400.00</strike> <b>R$369.00</b></p>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao2.avif" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Gatos</h4>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <p class="preco"><strike>R$25.00</strike> <b>R$23.99</b></p>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao3.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Labradores</h4>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                        </ul>
+                      </div>
+                      <p class="preco"><strike>R$899.00</strike> <b>R$649.00</b></p>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao8.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Filhotes</h4>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <p class="preco"><strike>R$315.00</strike> <b>R$250.00</b></p>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="item">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao4.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Gatos</h4>
+                      <p class="preco"><strike>R$289.00</strike> <span>R$269.00</span></p>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao5.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Porte Médio</h4>
+                      <p class="preco"><strike>R$1099.00</strike> <span>R$869.00</span></p>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao6.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Carne</h4>
+                      <p class="preco"><strike>R$109.00</strike> <span>R$99.00</span></p>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="thumb-wrapper">
+                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                    <div class="img-box">
+                      <img src="assets/racao7.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Ração Gatos Adultos</h4>
+                      <p class="preco"><strike>R$599.00</strike> <span>R$569.00</span></p>
+                      <div class="estrela">
+                        <ul class="list-inline">
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                          <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                        </ul>
+                      </div>
+                      <a href="#" class="btn btn-primary">Adicione ao Carrinho</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- controles carousel -->
+          <a class="carousel-control left" href="#carousel" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+          </a>
+          <a class="carousel-control right" href="#carousel" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Desenvolvido por Gabriela</p>
+    <div class="footer-container">
+      <div class="mapa">
+        <img src="assets/mapa.png" alt="Mapa Icon" class="icon-footer">
+        <h2 class="footer-info">Endereço</h2>
+        <p class="footer-info">Rua Tal, 200</p>
+
+      </div>
+      <div class="numero">
+        <img src="assets/numero.png" alt="Telefone Icon" class="icon-footer">
+        <h2 class="footer-info">Telefone</h2>
+        <p class="footer-info">(51) 9999-00000</p>
+      </div>
+
+      <div class="email">
+        <img src="assets/email.png" alt="Email Icon" class="icon-footer">
+        <h2 class="footer-info">Email</h2>
+        <p class="footer-info">petshop@email.com</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script src="js/cad.js"></script>
+  <script src="js/produtos.js"></script>
+
+</body>
+
+</html>
